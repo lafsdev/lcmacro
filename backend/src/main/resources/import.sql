@@ -1,0 +1,12 @@
+insert into tb_tipo_macro (nome_macro, numero_macro) values ('Em viagem', '1');
+insert into tb_tipo_macro (nome_macro, numero_macro) values ('Chegada para carga', '2');
+insert into tb_tipo_macro (nome_macro, numero_macro) values ('Fim de Carregamento', '3');
+insert into tb_tipo_macro (nome_macro, numero_macro) values ('Início de  viagem', '4');
+insert into tb_tipo_macro (nome_macro, numero_macro) values ('Chegada para Descarga', '5');
+insert into tb_tipo_macro (nome_macro, numero_macro) values ('Fim de viagem', '6');
+insert into tb_tipo_macro (nome_macro, numero_macro) values ('Abastecimento', '7');
+insert into tb_tipo_macro (nome_macro, numero_macro) values ('Arla', '8');
+insert into tb_tipo_macro (nome_macro, numero_macro) values ('Pneu', '9');
+insert into tb_proprietario (nome, cnpj) values ('TransLCTECH','99.999.999/9999-99');
+insert into tb_veiculo(ano_fabricacao,ano_modelo,chassi,frota,marca,modelo,placa,renavam,proprietario_id) values (2020, 2019, '29829828192829', 'frota01', 'DAF', 'XFS','CMC-9999','8989898998989',1);
+insert into tb_macro (tipo_macro_id, veiculo_id, nota_fiscal, kilometragem, quantidade_diesel, quantidade_arla, numero_pneu, peso, posto_nome, ctrc, posicao,mensagem) values (1,1,'9999',20000,200,399,8,100000,'Corujinha','899','898989 - posicao', 'mensagem de teste');
