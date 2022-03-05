@@ -1,0 +1,23 @@
+<mat-toolbar>
+  <span>Tipos de Macros</span>
+</mat-toolbar>
+<mat-nav-list color="black">
+  <mat-list-item *ngFor="let tipoMacro of tipoMacros">
+    <a matLine [routerLink]="['/tipomacro', tipoMacro.id]">
+      {{ tipoMacro.numeromacro }} -  {{ tipoMacro.nomemacro }}
+    </a>
+    <button mat-icon-button (click)="deleteTipoMacro(tipoMacro)">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </mat-list-item>
+</mat-nav-list>
+
+<a
+  class="create"
+  routerLink="/tipomacro/create"
+  color="primary"
+  mat-fab
+  aria-label="Nova Macro"
+>
+  <mat-icon>add</mat-icon>
+</a>

@@ -1,0 +1,18 @@
+<mat-toolbar>
+  <span>Detalhes da Macro #{{ id }}</span>
+</mat-toolbar>
+
+<form [formGroup]="tipoMacroForm" class="form" (ngSubmit)="updateTipoMacro()" >
+  <mat-form-field appearance="standard">
+    <mat-label>Nome Macro</mat-label>
+    <input matInput formControlName="nomemacro">
+  </mat-form-field>
+  <mat-form-field appearance="standard">
+    <mat-label>Número Macro</mat-label>
+    <input matInput formControlName="numeromacro">
+  </mat-form-field>
+  <div class="actions">
+    <button routerLink="/tipomacro" mat-raised-button>Voltar para lista</button>
+    <button type="submit" mat-raised-button color="primary" [disabled]="!tipoMacroForm.dirty || tipoMacroForm.invalid" >Salvar</button>
+  </div>
+</form>

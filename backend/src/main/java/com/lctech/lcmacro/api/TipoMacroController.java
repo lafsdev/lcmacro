@@ -1,6 +1,7 @@
 package com.lctech.lcmacro.api;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -42,5 +43,11 @@ public class TipoMacroController {
 	public void deleteById(@PathVariable Long tipoMacroId) {
 
 		tipoMacroService.deleteById(tipoMacroId);
+	}
+	
+	@GetMapping("/{tipoMacroId}")
+	public Optional<TipoMacro> getById(@PathVariable Long tipoMacroId) {
+
+		return tipoMacroService.findById(tipoMacroId);
 	}
 }

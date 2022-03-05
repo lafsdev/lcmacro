@@ -1,6 +1,7 @@
 package com.lctech.lcmacro.domain.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -26,6 +27,10 @@ public class TipoMacroService {
 
 	public void deleteById(Long tipoMacroId) {
 		tipoMacroRepository.deleteById(tipoMacroId);
+	}
+	
+	public Optional<TipoMacro> findById(Long tipoMacroId) {
+		return tipoMacroRepository.findById(tipoMacroId);
 	}
 
 }

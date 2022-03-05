@@ -1,0 +1,18 @@
+<mat-toolbar>
+  <span>Novo tipo de Macro</span>
+</mat-toolbar>
+
+<form [formGroup]="tipoMacroForm" class="form" (ngSubmit)="createTipoMacro()">
+  <mat-form-field appearance="standard">
+    <mat-label>Nome Macro</mat-label>
+    <input matInput formControlName="nomemacro">
+  </mat-form-field>
+  <mat-form-field appearance="standard">
+    <mat-label>Número Macro</mat-label>
+    <input matInput formControlName="numeromacro">
+  </mat-form-field>
+  <div class="actions">
+    <button routerLink="/tipomacro" mat-raised-button>Cancelar</button>
+    <button type="submit" mat-raised-button color="primary" [disabled]="tipoMacroForm.invalid" >Criar</button>
+  </div>
+</form>
